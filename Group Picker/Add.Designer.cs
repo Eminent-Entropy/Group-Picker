@@ -32,7 +32,6 @@
             this.CmboE2 = new System.Windows.Forms.ComboBox();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.BtnHelp0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CmboE1
@@ -53,9 +52,9 @@
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(43, 39);
+            this.BtnAdd.Location = new System.Drawing.Point(12, 39);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(146, 23);
+            this.BtnAdd.Size = new System.Drawing.Size(177, 23);
             this.BtnAdd.TabIndex = 2;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.UseVisualStyleBackColor = true;
@@ -71,23 +70,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // BtnHelp0
-            // 
-            this.BtnHelp0.Location = new System.Drawing.Point(12, 39);
-            this.BtnHelp0.Name = "BtnHelp0";
-            this.BtnHelp0.Size = new System.Drawing.Size(25, 23);
-            this.BtnHelp0.TabIndex = 4;
-            this.BtnHelp0.Text = "?";
-            this.BtnHelp0.UseVisualStyleBackColor = true;
-            this.BtnHelp0.Click += new System.EventHandler(this.BtnHelp0_Click);
-            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 64);
+            this.ClientSize = new System.Drawing.Size(282, 69);
             this.ControlBox = false;
-            this.Controls.Add(this.BtnHelp0);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.CmboE2);
@@ -109,6 +97,5 @@
         private System.Windows.Forms.ComboBox CmboE2;
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button BtnHelp0;
     }
 }

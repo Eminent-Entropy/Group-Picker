@@ -14,3 +14,4 @@ C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picke
 C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\bin\Debug\Group Picker.application
 C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.exe.manifest
 C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.application
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group_Picker.remeber.resources

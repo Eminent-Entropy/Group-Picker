@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -87,6 +87,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="remeber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="remeber.Designer.cs">
+      <DependentUpon>remeber.cs</DependentUpon>
+    </Compile>
     <Compile Include="resaults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="remeber.resx">
+      <DependentUpon>remeber.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="resaults.resx">
       <DependentUpon>resaults.cs</DependentUpon>
     </EmbeddedResource>

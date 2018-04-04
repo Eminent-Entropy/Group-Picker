@@ -20,6 +20,8 @@ namespace Group_Picker
             names = inputN;
             setup = inputF;
             InitializeComponent();
+            CmboE1.DropDownStyle = ComboBoxStyle.DropDownList;
+            CmboE2.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -44,11 +46,6 @@ namespace Group_Picker
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void BtnHelp0_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Click the drop down arrow on each select box to get a list of options");
         }
     }
 }

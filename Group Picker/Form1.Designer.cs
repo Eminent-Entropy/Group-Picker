@@ -38,6 +38,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.NumSize = new System.Windows.Forms.NumericUpDown();
+            this.BtnRe = new System.Windows.Forms.Button();
+            this.BtnClearE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NumSize)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             // 
             // BtnHelp0
             // 
-            this.BtnHelp0.Location = new System.Drawing.Point(98, 5);
+            this.BtnHelp0.Location = new System.Drawing.Point(91, 5);
             this.BtnHelp0.Name = "BtnHelp0";
             this.BtnHelp0.Size = new System.Drawing.Size(25, 23);
             this.BtnHelp0.TabIndex = 1;
@@ -142,11 +144,33 @@
             0,
             0});
             // 
+            // BtnRe
+            // 
+            this.BtnRe.Location = new System.Drawing.Point(129, 5);
+            this.BtnRe.Name = "BtnRe";
+            this.BtnRe.Size = new System.Drawing.Size(117, 23);
+            this.BtnRe.TabIndex = 10;
+            this.BtnRe.Text = "Remember Tool";
+            this.BtnRe.UseVisualStyleBackColor = true;
+            this.BtnRe.Click += new System.EventHandler(this.BtnRe_Click);
+            // 
+            // BtnClearE
+            // 
+            this.BtnClearE.Location = new System.Drawing.Point(255, 376);
+            this.BtnClearE.Name = "BtnClearE";
+            this.BtnClearE.Size = new System.Drawing.Size(198, 23);
+            this.BtnClearE.TabIndex = 11;
+            this.BtnClearE.Text = "Clear Exceptions";
+            this.BtnClearE.UseVisualStyleBackColor = true;
+            this.BtnClearE.Click += new System.EventHandler(this.BtnClearE_Click);
+            // 
             // Setup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 432);
+            this.Controls.Add(this.BtnClearE);
+            this.Controls.Add(this.BtnRe);
             this.Controls.Add(this.NumSize);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -158,7 +182,8 @@
             this.Controls.Add(this.BtnHelp0);
             this.Controls.Add(this.TxtNames);
             this.Name = "Setup";
-            this.Text = "Execptions";
+            this.Text = "Group Picker";
+            this.Load += new System.EventHandler(this.Setup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumSize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,6 +202,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown NumSize;
+        private System.Windows.Forms.Button BtnRe;
+        private System.Windows.Forms.Button BtnClearE;
     }
 }
 
