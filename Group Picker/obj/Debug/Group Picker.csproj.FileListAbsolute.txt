@@ -1,0 +1,16 @@
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\bin\Debug\Group Picker.exe.config
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\bin\Debug\Group Picker.exe
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\bin\Debug\Group Picker.pdb
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group_Picker.Properties.Resources.resources
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.csproj.GenerateResource.Cache
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.csproj.CoreCompileInputs.cache
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.exe
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.pdb
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.csprojResolveAssemblyReference.cache
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group_Picker.Add.resources
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group_Picker.Setup.resources
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group_Picker.resaults.resources
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\bin\Debug\Group Picker.exe.manifest
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\bin\Debug\Group Picker.application
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.exe.manifest
+C:\Users\gerbster\Documents\Visual Studio 2017\Projects\Group Picker\Group Picker\obj\Debug\Group Picker.application
