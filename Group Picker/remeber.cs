@@ -14,39 +14,50 @@ namespace Group_Picker
     public partial class remeber : Form
     {
         Setup setup;
-        string nameFile;
+        string mainDir;
+        List<string> files = new List<string>();
 
         public remeber(Setup inputF)
         {
             InitializeComponent();
             setup = inputF;
-            nameFile = setup.nameFile;
+            mainDir = setup.mainPath;
         }
 
         private void BtnAddN_Click(object sender, EventArgs e)
         {
-            string newName = TxtNewName.Text;
-
-            if (!LstNames.Items.Contains(newName))
+            string name = TxtNewName.Text;
+            if (!File.Exists(Path.Combine(mainDir, name)))
             {
-                LstNames.Items.Add(newName);
-                string fileWrite = File.ReadAllText(nameFile) + newName + Environment.NewLine;
-                File.WriteAllText(nameFile, fileWrite);
+                File.Create(Path.Combine(mainDir, name)).Close();
+                LstNames.Items.Add(name);
             }
         }
 
         private void remeber_Load(object sender, EventArgs e)
         {
-            int fileLines = File.ReadLines(nameFile).Count();
-            if (fileLines > 0)
+            files = Directory.GetFiles(mainDir).ToList();
+            for (int i = 0; i != files.Count(); i++)
             {
-                for (int i = 0; i < fileLines; i++) LstNames.Items.Add(File.ReadAllLines(nameFile)[i]);
+                LstNames.Items.Add(files[i].Substring(16, files[i].Length - 16));
             }
         }
 
         private void BtnAddT_Click(object sender, EventArgs e)
         {
-            setup.addName(LstNames.Items[LstNames.SelectedIndex].ToString());
+            int sel = LstNames.SelectedIndex;
+            string name = LstNames.Items[sel].ToString();
+            string line;
+
+            // Read the file and display it line by line.  
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(Path.Combine(mainDir, name));
+            while ((line = file.ReadLine()) != null)
+            {
+                setup.addName(line);
+            }
+            file.Close();
+            Close();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -56,21 +67,25 @@ namespace Group_Picker
 
         private void BtnDel_Click(object sender, EventArgs e)
         {
-            string delName = LstNames.Items[LstNames.SelectedIndex].ToString();
-            List<string> fileList = File.ReadAllLines(nameFile).ToList();
-            if (fileList.Contains(delName))
-            {
-                fileList.Remove(delName);
-                File.WriteAllLines(nameFile, fileList.ToArray());
-                LstNames.Items.RemoveAt(LstNames.SelectedIndex);
-            }
+            int sel = LstNames.SelectedIndex;
+            string name = LstNames.Items[sel].ToString();
+            ClassEdit clEt = new ClassEdit(this, Path.Combine(mainDir, name));
+            clEt.Show();
         }
 
         private void BtnHelp0_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("-Use the textbox and add button to add names to the remember list" + Environment.NewLine + Environment.NewLine +
-                            "-To add a name to the active list select it by clicking it and click the add selected name button" + Environment.NewLine + Environment.NewLine +
-                            "-Names on the remember list are remebered even after closing the program");
+            MessageBox.Show("-Use the textbox and create button to make a new class" + Environment.NewLine + Environment.NewLine +
+                            "-To add a class to the active list select it by clicking it and click the add selected class button" + Environment.NewLine + Environment.NewLine +
+                            "-To add/remove names from a class select the class and click the edit button");
+        }
+
+        private void BtnKill_Click(object sender, EventArgs e)
+        {
+            int sel = LstNames.SelectedIndex;
+            string name = LstNames.Items[sel].ToString();
+            LstNames.Items.RemoveAt(sel);
+            File.Delete(Path.Combine(mainDir, name));
         }
     }
 }

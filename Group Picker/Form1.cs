@@ -18,14 +18,12 @@ namespace Group_Picker
 
         public string drivePath;
         public string mainPath;
-        public string nameFile;
 
         public Setup()
         {
             InitializeComponent();
             drivePath = "C://";
             mainPath = Path.Combine(drivePath, "GroupPicker");
-            nameFile = Path.Combine(mainPath, "names");
         }
 
         public void getNames()
@@ -71,7 +69,6 @@ namespace Group_Picker
         private void Setup_Load(object sender, EventArgs e)
         {
             if (!Directory.Exists(mainPath)) Directory.CreateDirectory(mainPath);
-            if (!File.Exists(nameFile)) File.Create(nameFile);
         }
 
         public void addName(string name)

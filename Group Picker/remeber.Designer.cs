@@ -35,12 +35,13 @@
             this.TxtNewName = new System.Windows.Forms.TextBox();
             this.BtnDel = new System.Windows.Forms.Button();
             this.BtnHelp0 = new System.Windows.Forms.Button();
+            this.BtnKill = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LstNames
             // 
             this.LstNames.FormattingEnabled = true;
-            this.LstNames.Location = new System.Drawing.Point(12, 38);
+            this.LstNames.Location = new System.Drawing.Point(12, 35);
             this.LstNames.Name = "LstNames";
             this.LstNames.Size = new System.Drawing.Size(356, 550);
             this.LstNames.TabIndex = 0;
@@ -51,25 +52,25 @@
             this.BtnAddN.Name = "BtnAddN";
             this.BtnAddN.Size = new System.Drawing.Size(141, 23);
             this.BtnAddN.TabIndex = 1;
-            this.BtnAddN.Text = "Add name to remeber";
+            this.BtnAddN.Text = "Create class";
             this.BtnAddN.UseVisualStyleBackColor = true;
             this.BtnAddN.Click += new System.EventHandler(this.BtnAddN_Click);
             // 
             // BtnAddT
             // 
-            this.BtnAddT.Location = new System.Drawing.Point(90, 594);
+            this.BtnAddT.Location = new System.Drawing.Point(12, 594);
             this.BtnAddT.Name = "BtnAddT";
-            this.BtnAddT.Size = new System.Drawing.Size(137, 23);
+            this.BtnAddT.Size = new System.Drawing.Size(159, 23);
             this.BtnAddT.TabIndex = 2;
-            this.BtnAddT.Text = "Add selected name to list";
+            this.BtnAddT.Text = "Add selected class to list";
             this.BtnAddT.UseVisualStyleBackColor = true;
             this.BtnAddT.Click += new System.EventHandler(this.BtnAddT_Click);
             // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(12, 594);
+            this.BtnClose.Location = new System.Drawing.Point(12, 623);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(72, 23);
+            this.BtnClose.Size = new System.Drawing.Size(159, 23);
             this.BtnClose.TabIndex = 3;
             this.BtnClose.Text = "Close";
             this.BtnClose.UseVisualStyleBackColor = true;
@@ -84,11 +85,11 @@
             // 
             // BtnDel
             // 
-            this.BtnDel.Location = new System.Drawing.Point(233, 594);
+            this.BtnDel.Location = new System.Drawing.Point(209, 594);
             this.BtnDel.Name = "BtnDel";
-            this.BtnDel.Size = new System.Drawing.Size(135, 23);
+            this.BtnDel.Size = new System.Drawing.Size(159, 23);
             this.BtnDel.TabIndex = 5;
-            this.BtnDel.Text = "Remove Selected name";
+            this.BtnDel.Text = "Edit selected class";
             this.BtnDel.UseVisualStyleBackColor = true;
             this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
@@ -102,11 +103,23 @@
             this.BtnHelp0.UseVisualStyleBackColor = true;
             this.BtnHelp0.Click += new System.EventHandler(this.BtnHelp0_Click);
             // 
+            // BtnKill
+            // 
+            this.BtnKill.Location = new System.Drawing.Point(209, 620);
+            this.BtnKill.Name = "BtnKill";
+            this.BtnKill.Size = new System.Drawing.Size(159, 23);
+            this.BtnKill.TabIndex = 7;
+            this.BtnKill.Text = "Delete selected class";
+            this.BtnKill.UseVisualStyleBackColor = true;
+            this.BtnKill.Click += new System.EventHandler(this.BtnKill_Click);
+            // 
             // remeber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 623);
+            this.ClientSize = new System.Drawing.Size(377, 655);
+            this.ControlBox = false;
+            this.Controls.Add(this.BtnKill);
             this.Controls.Add(this.BtnHelp0);
             this.Controls.Add(this.BtnDel);
             this.Controls.Add(this.TxtNewName);
@@ -114,7 +127,11 @@
             this.Controls.Add(this.BtnAddT);
             this.Controls.Add(this.BtnAddN);
             this.Controls.Add(this.LstNames);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "remeber";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "remeber";
             this.Load += new System.EventHandler(this.remeber_Load);
@@ -132,5 +149,6 @@
         private System.Windows.Forms.TextBox TxtNewName;
         private System.Windows.Forms.Button BtnDel;
         private System.Windows.Forms.Button BtnHelp0;
+        private System.Windows.Forms.Button BtnKill;
     }
 }
